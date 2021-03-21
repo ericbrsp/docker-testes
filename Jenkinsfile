@@ -8,8 +8,9 @@ pipeline {
         }
         stage('Building image') { 
             steps {
-       //     echo "teste"    //
-            docker.build("my-image:${env.BUILD_ID}")
+                script{ 
+                    docker.build("my-image:${env.BUILD_ID}")
+                }
             }
         }
         stage('Deploy') { 

@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Building image') { 
             steps {
-                    echo "deploy" 
+                    echo "Olá Deploy" 
             }
         }
         stage('Deploy') { 

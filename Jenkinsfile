@@ -2,14 +2,15 @@ pipeline {
 
   agent any
 
-    stages {
+  stages {
+      
     stage('Cloning Git') {
       steps {
         git 'https://github.com/ericbrsp/docker-testes.git'
 
       }
     }
-   }
+   
     stage('Building image') {
       steps{
         script {
@@ -18,3 +19,4 @@ pipeline {
       }
     }
   }
+}

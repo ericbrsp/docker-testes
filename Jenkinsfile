@@ -14,7 +14,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          docker build -f dockerfile-front + ":$BUILD_NUMBER" .
+          sh docker build -f dockerfile-front + ":$BUILD_NUMBER" .
         }
       }
     }

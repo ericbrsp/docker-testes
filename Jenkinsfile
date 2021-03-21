@@ -9,9 +9,9 @@ pipeline {
         }
         stage('Building image') { 
             steps {
-                script{ 
+        
                     echo "deploy" 
-                }
+                
             }
         }
         stage('Deploy') { 

@@ -5,7 +5,7 @@ pipeline {
     stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/ericbrsp/docker-testes.git')
+        git 'https://github.com/ericbrsp/docker-testes.git'
 
       }
     }

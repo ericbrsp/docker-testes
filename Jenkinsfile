@@ -1,4 +1,5 @@
 pipeline {
+
     agent any 
     stages {
         stage('Clonando o GIT') { 
@@ -9,7 +10,7 @@ pipeline {
         stage('Building image') { 
             steps {
                 script{ 
-                    docker.build
+                    docker.build()
                 }
             }
         }

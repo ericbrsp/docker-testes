@@ -9,7 +9,7 @@ pipeline {
         stage('Building image') { 
             steps {
        //     echo "teste"    //
-            sh (docker build -f dockerfile-front + ":$BUILD_NUMBER" . )
+            sh (docker build -f dockerfile-front //+ ":$BUILD_NUMBER" . )//
             }
         }
         stage('Deploy') { 

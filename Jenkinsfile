@@ -10,7 +10,7 @@ pipeline {
         stage('Building image') { 
             steps {
                 script{ 
-                    docker.build("teste-1")
+                    docker.build("my-image:${env.BUILD_ID}")
                 }
             }
         }

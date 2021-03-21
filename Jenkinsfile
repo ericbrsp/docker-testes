@@ -9,7 +9,7 @@ pipeline {
         stage('Building image') { 
             steps {
        //     echo "teste"    //
-            sh 'docker build -f dockerfile-front . '
+            docker.build("my-image:${env.BUILD_ID}")
             }
         }
         stage('Deploy') { 

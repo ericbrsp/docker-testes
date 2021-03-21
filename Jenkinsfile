@@ -10,7 +10,7 @@ pipeline {
         stage('Building image') { 
             steps {
                 script{ 
-                    docker.build()
+                    docker.build("teste-1")
                 }
             }
         }

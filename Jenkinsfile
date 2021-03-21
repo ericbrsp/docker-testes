@@ -7,11 +7,17 @@ pipeline {
             git 'https://github.com/ericbrsp/docker-testes.git'    
             }
         }
+
+
         stage('Building image') { 
             steps {
-                    echo "Olá Imagem" 
+                script{
+                    docker.build("teste")
+                }
             }
         }
+
+
         stage('Deploy') { 
             steps {
              echo "deploy" 

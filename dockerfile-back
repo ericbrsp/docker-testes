@@ -1,0 +1,8 @@
+FROM openjdk:8-alpine
+MAINTAINER Orizon-Devops-Eric Gonçalves                       
+COPY ./deploy /deploy
+WORKDIR /deploy 
+ENTRYPOINT ["java", "-jar", "/deploy/devopsdashboardapi-0.0.1-SNAPSHOT.jar"]
+EXPOSE 80
+EXPOSE 8080
+EXPOSE 8787

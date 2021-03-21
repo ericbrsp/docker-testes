@@ -1,0 +1,27 @@
+.doughnut-labels {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #666666;
+
+    p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .label-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+}
+
+app-chart{
+    display: block;
+}

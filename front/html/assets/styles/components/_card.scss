@@ -1,0 +1,255 @@
+.card-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $blue;
+    height: 40px;
+}
+
+.card-doughnut-chart-container {
+    position: relative;
+    height: calc(100% - 60px);
+    width: calc(40%);
+
+    .value-number {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 28px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #4a4a4a;
+    }
+
+    &.card-half-doughnut-chart-container {
+        &:before {
+            content: "0%";
+            position: absolute;
+            left: 0;
+            bottom: -10%;
+            font-size: 15px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #4a4a4a;
+        }
+
+        &:after {
+            content: "100%";
+            position: absolute;
+            right: -10px;
+            bottom: -10%;
+            font-size: 15px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #4a4a4a;
+        }
+    }
+}
+
+.card-chart-with-labels {
+    position: relative;
+
+    .doughnut-labels {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+.card-line-chart-container {
+    position: relative;
+    height: calc(100% - 60px);
+    width: 100%;
+}
+
+.card-bar-chart-container{
+    display: flex;
+    height: calc(100% - 60px);
+    p .label-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .labels-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+        margin-left: 10px;
+
+        p {
+            font-size: 12px;
+        }
+    }  
+
+    .card-bar-grafico-content {
+        width: calc(65%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+    }
+}
+
+.list-small {
+    top: 0;
+    margin-top: 15px;
+
+    p {
+        font-size: 12px !important;
+    }
+
+    span {
+        height: 15px !important;
+        width: 15px !important;
+    }
+}
+
+.pipeline-card-container {
+    position: relative;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .pipeline-item-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        width: 100%;      
+
+        img {
+            margin-left: 10px;
+            width: 22%;
+            height: 27px;
+        }
+        
+        p {
+            display: flex; 
+            align-items: center;
+            font-size: 20px;
+            font-weight: 800;
+            color: $light-grey;
+
+            &:first-child{
+                width: 20%;
+            } 
+            &:last-child{
+                width: 22%;
+            }            
+        }
+        span {
+            font-size: 12px;
+            color: $dark-grey;
+            margin-left: 5px;
+            text-align: left;
+            width: 36%;
+        }
+    }
+}
+
+.pipeline-card-container .pipeline-item-content img {
+    width: 22px !important;
+}
+
+.deploys-sucesso-container {
+    display: flex;
+    align-items: center;
+    height: 65%;
+
+    p {
+        font-size: 50px;
+        margin-left: 20px;
+        color: #17629e;
+        font-weight: bold;            
+    }
+}
+
+.foguete {
+    background-image: url('/assets/images/img-foguete.png') !important; 
+    background-repeat: no-repeat !important;
+    background-position: 95% 100% !important; 
+    background-size: 30% !important; 
+}
+
+.card-commit-build-container  {
+    position: relative;
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-commit-build-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: calc(100%);
+        width: calc(50%);        
+    }
+}
+
+.card-image {
+    img {
+        width: 50px;
+    }
+
+    p {
+        font-size: 35px;
+        font-weight: bold;
+        color: $light-grey;
+    }
+
+    span {
+        font-size: 14px;
+        color: $dark-grey;
+        font-weight: bold;
+    }
+}
+
+.feature-container {
+    position: relative;
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .feature-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: calc(100%);
+        width: calc(50%);
+    }
+
+    .last-feature-container {
+        justify-content: flex-end;
+
+        span {
+            margin-top: 20px;
+        }
+
+        span:last-child {
+            margin-bottom: 20px;
+        }
+    }
+}

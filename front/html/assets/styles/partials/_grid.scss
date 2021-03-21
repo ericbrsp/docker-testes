@@ -1,0 +1,128 @@
+.default-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.small {
+        height: 250px;
+    }
+
+    &.medium {
+        height: 350px;
+    }
+
+    &.large {
+        height: 480px;
+    }
+
+    &.center-items {
+        align-items: center;
+    }
+
+    .data-content-list {
+        width: 100%;
+    }
+
+    .sub-grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+// Grid logic
+$class-slug: col !default;
+$grid-length: 12;
+
+$class-mt-slug: mt !default;
+$class-mr-slug: mr !default;
+$class-mb-slug: mb !default;
+$class-ml-slug: ml !default;
+$margin-lenth: 300;
+
+@mixin col-size($col-size) {
+    width: calc((100% / 12) * #{$col-size} - 30px);
+}
+
+@for $i from 1 through $grid-length {
+    .#{$class-slug}-#{$i} {
+        @include col-size(#{$i});
+
+        display: block;
+        margin: 15px;
+    }
+}
+
+//margin-top
+@for $i from 0 through $margin-lenth {
+    .#{$class-mt-slug}-#{$i} {
+        margin-top: #{$i}px;
+    }
+}
+
+//margin-right
+@for $i from 0 through $margin-lenth {
+    .#{$class-mr-slug}-#{$i} {
+        margin-right: #{$i}px;
+    }
+}
+
+//margin-botton
+@for $i from 0 through $margin-lenth {
+    .#{$class-mb-slug}-#{$i} {
+        margin-bottom: #{$i}px;
+    }
+}
+
+//margin-left
+@for $i from 0 through $margin-lenth {
+    .#{$class-ml-slug}-#{$i} {
+        margin-left: #{$i}px;
+    }
+}
+
+@for $i from 1 through $grid-length {
+    /* Tablets (portrait and landscape) ----------- */
+    @media screen and (max-width: 1024px) {
+        .#{$class-slug}-medium-#{$i} {
+            @include col-size(#{$i});
+        }
+    }
+}
+
+@for $i from 1 through $grid-length {
+    /* Smartphones (portrait and landscape) ----------- */
+    @media screen and (max-width: 480px) {
+        .#{$class-slug}-small-#{$i} {
+            @include col-size(#{$i});
+        }
+    }
+}
+
+// Grid container styles
+.default-grid {
+    align-items: stretch;
+    height: 100%;
+
+    div[class^="col-"] {
+        background: $white;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 20px 20px 0;
+        border-radius: 30px;
+        box-shadow: 0 2px 5px 0 rgba(83, 97, 255, 0.05);
+    }
+}
+
+// Grid row styles
+.grid-row-container {
+    height: calc(100vh - 130px);
+    padding: 0 45px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .grid-row {
+        width: 100%;
+        height: calc(100% / 3 - 25px);
+        margin-bottom: 25px;
+    }
+}

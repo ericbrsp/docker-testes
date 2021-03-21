@@ -1,11 +1,17 @@
 pipeline {
   environment {
-    #registry = "docker_hub_account/repository_name"
-    #registryCredential = 'dockerhub'
+
   }
   
   agent any
-  
+
+    stages {
+    stage('Cloning Git') {
+      steps {
+        git([url: 'https://github.com/ericbrsp/docker-testes.gitt', branch: 'master', credentialsId: 'ericbrs['])
+
+      }
+    }
   stages {
     stage('Building image') {
       steps{

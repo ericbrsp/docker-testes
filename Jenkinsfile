@@ -16,7 +16,7 @@ pipeline {
         script {
           sh docker build -f dockerfile-front + ":$BUILD_NUMBER" .
         
-      }
+      
     }
   }
 }

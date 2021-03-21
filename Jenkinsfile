@@ -12,7 +12,7 @@ pipeline {
         stage('Building image') { 
             steps {
                 script{
-                    docker.build("test-image", ".dockerfile-front")
+                    docker.build("test-image", "./dockerfile-front")
                 }
             }
         }

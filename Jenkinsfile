@@ -13,7 +13,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          docker.build docker-front + ":$BUILD_NUMBER"
+          docker build -f dockerfile-front + ":$BUILD_NUMBER" .
         }
       }
     }
